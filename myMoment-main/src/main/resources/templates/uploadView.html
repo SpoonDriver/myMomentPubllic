@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="myMoment">
+        <meta name="keywords" content="myMoment">
+        <meta name="description" content="myMoment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/uploadStyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+
+        <title>Upload</title>
+    </head>
+    <body>
+        <header class="topbar">
+            <a href="/" class="logo">my<span class="boldMoment">Moment</span></a>
+        </header>
+        <div class="topbarmargin"></div>
+
+        <div class="gridContainer">
+            <div class="imgPreview">
+                <img id="preview" src="/images/Group%2037.png" alt="preview">
+            </div>
+
+            <form id="uploadForm" th:action="'/upload'" method="POST" enctype="multipart/form-data">
+                <textarea id="textField" name="imgText" placeholder="Description:"></textarea>
+                <label class="formButton" for="fileField">New photo</label>
+                <input id="fileField" type="file" name="file" capture="environment" accept="image/*" onchange="loadFile(event)" onclick="checkStatus(event)">
+                <input id="latField" type="hidden" name="lat">
+                <input id="lngField" type="hidden" name="lng">
+                <input id="timeField" type="hidden" name="time">
+                <button class="formButton" id="uploadButton" type="submit" disabled>Upload</button>
+            </form>
+        </div>
+
+        <!-- Bottom bar with icons -->
+        <nav class="navbar">
+            <a class="navbarItem" id="homeButton" href="/">
+                <i class="material-icons">home</i>
+            </a>
+            <a class="navbarItem" id="mapButton" href="/map">
+                <i class="material-icons">map</i>
+            </a>
+            <a class="navbarItem" id="newPostButton" href="/newpost">
+                <i class="material-icons">camera_alt</i>
+            </a>
+            <a class="navbarItem" id="searchButton" href="">
+                <i class="material-icons">search</i>
+            </a>
+            <a class="navbarItem" id="profileButton" href="/profile">
+                <i class="material-icons">person</i>
+            </a>
+        </nav>
+        <div class="navbarMargin"></div>
+
+    <script src="/uploadScript.js"></script>
+    </body>
+</html>

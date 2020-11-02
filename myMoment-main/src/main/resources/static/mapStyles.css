@@ -1,0 +1,79 @@
+#map {
+    height: 100vh;
+}
+
+/* Shows which page you are on in the navbar */
+#mapButton {
+    opacity: 100%;
+}
+
+.topbarmargin {
+    top: 0;
+    margin-bottom: 0;
+}
+
+.navbarMargin {
+    bottom: 0;
+    margin: 0;
+}
+
+#mapImagePreview {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    width: 150px;
+}
+
+#username {
+    font-size: 18px;
+    color: #9d9d9d;
+    font-weight: bold;
+    background-color: #444444;
+    opacity: 75%;
+}
+
+#textPreview{
+    font-size: 12px;
+    color: #ffffff;
+}
+
+#datePreview{
+    font-size: 8px;
+    color: #737373;
+    font-style: oblique;
+}
+
+#textPreviewAndDatePreview{
+    background-color: #444444;
+    opacity: 75%;
+}
+
+#contentString {}
+
+.gm-style-iw{
+    padding: 0;
+    background: none;
+    margin: 0;
+}
+
+.gm-style .gm-style-iw-c {
+    padding: 0;
+    background-color: #ef8874;
+    background-image: linear-gradient(
+            #ef8874,
+            #e068a4,
+            #d9669c,
+            #c26080,
+            #8d3f59,
+            #745ac5
+    );
+    margin: 0;
+}
+
+.gm-style .gm-style-iw-t::after{
+    width: 0;
+    transform: none;
+    height: 0;
+    padding: 0;
+    background: none;
+    margin: 0;
+}

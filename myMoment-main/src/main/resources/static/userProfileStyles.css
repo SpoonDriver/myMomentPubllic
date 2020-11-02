@@ -1,0 +1,152 @@
+.profilePicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+    border: 20px solid #555;
+
+    object-fit: cover;
+    object-position: center right;
+}
+
+.userInfo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.userName {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+#uploadForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+            "fileButton submitButton";
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#fileField {
+    grid-area: fileButton;
+}
+
+#uploadButton {
+    grid-area: submitButton;
+    justify-self: end;
+}
+
+input[id="signOut"] {
+    display: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.formButton {
+    width: 95%;
+    background: #555;
+    border: 2px solid #555;
+    padding: 5px;
+    margin: 12px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #d9d9d9;
+}
+
+.userDescription {
+    /*color: #444;*/
+    color: #d9d9d9;
+    padding: 15px;
+    border-radius: 10px;
+    /*background-color: white;*/
+    background-color: #555;
+    width: auto;
+}
+
+/* The user's Moments gallery */
+.userMomentsHeader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.userPost {
+    margin: 0 5% 5% 5%;
+    padding: 20px 20px 20px;
+    background-color: #FF6F91;
+    background-image: linear-gradient(
+            #FF9671,
+            #FF6F91,
+            #FF6F91,
+            #FF6F91,
+            #D65DB1,
+            #D65DB1,
+            #D65DB1,
+            #9666A8,
+            #845EC2,
+            #6946A5
+    );
+    border-radius: 20px;
+}
+
+.userImage {
+    width: 100%;
+}
+
+.userText {
+    padding: 5px 0 0 0;
+}
+
+#toTopButton {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 11%; /* Place the button at the bottom of the page */
+    right: 10%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #888; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 10px 7px 10px; /* Some padding */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+/*Logout button*/
+.logOutButton {
+    width: 90%;
+    background: #555;
+    border: 2px solid #555;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #AAAAAA;
+
+    margin: auto;
+    display: block;
+}
+
+/* Shows which page you are on in the navbar */
+#profileButton {
+    opacity: 100%;
+}

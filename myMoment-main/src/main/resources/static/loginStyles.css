@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.logo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+}
+
+.loginForm {
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  float: left;
+  font-size: 30px;
+  border-bottom: 5px solid #ef8874;
+  margin-bottom: 25px;
+  padding: 13px 0;
+}
+
+.textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #ef8874;
+}
+
+i {
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.loginButton {
+  width: 100%;
+  background: none;
+  border: 2px solid #ef8874;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+}
+
+.otherLogin {
+  width: 100%;
+  overflow: hidden;
+  font-size: 17px;
+  padding: 15px 0 0 0;
+}
+
+.createAccount {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.createOrAlreadyMember{
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}

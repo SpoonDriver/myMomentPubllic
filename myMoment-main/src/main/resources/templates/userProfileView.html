@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="myMoment">
+        <meta name="keywords" content="myMoment">
+        <meta name="description" content="myMoment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/userProfileStyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+
+    <title>User Profile</title>
+</head>
+<body>
+<header class="topbar">
+    <a href="/" class="logo">my<span class="boldMoment">Moment</span></a>
+</header>
+<div class="topbarmargin"></div>
+
+<div class="centreOnScreen">
+
+    <!--        <div class="centreOnScreen">-->
+    <img class="profilePicture" th:src="${user.profileImg}"
+         onerror="this.onerror=null;this.src='/images/Path%203.png';">
+    <!--        </div>-->
+
+    <form id="uploadForm" th:action="'/uploadProfileImage'" method="POST" enctype="multipart/form-data">
+        <label class="formButton" for="fileField">New photo</label>
+        <input class="formButton" id="fileField" type="file" name="file" accept="image/*">
+        <button class="formButton" id="uploadButton" type="submit">Upload</button>
+    </form>
+
+    <div class="userInfo">
+        <h3 class="userName" th:text="${'@' + #httpServletRequest.remoteUser}"></h3>
+
+        <p class="userDescription">
+            My cat and I like to climb mountains. My goal is to post a Moment on
+            every mountain top that's taller than 1500 metres above sea level! #flex
+        </p>
+    </div>
+
+      <!-- All the user's Moments -->
+      <h3 class="userMomentsHeader">My Moments</h3>
+        <section id="postFeed">
+            <div class="userPost" th:each="post: ${posts}">
+                <img class="userImage" th:src="${post.imgLink}">
+                <div class="userText">
+                    <p th:text="${post.imgText}"></p>
+                </div>
+            </div>
+        </section>
+
+    <form method="post" th:action="'/logout'">
+        <label class="logOutButton" for="signOut">Sign out</label>
+        <input id="signOut" type="submit">
+    </form>
+</div>
+
+        <!-- Bottom bar with icons -->
+        <nav class="navbar">
+            <a class="navbarItem" id="homeButton" href="/">
+                <i class="material-icons">home</i>
+            </a>
+            <a class="navbarItem" id="mapButton" href="/map">
+                <i class="material-icons">map</i>
+            </a>
+            <a class="navbarItem" id="newPostButton" href="/newpost">
+                <i class="material-icons">camera_alt</i>
+            </a>
+            <a class="navbarItem" id="searchButton" href="">
+                <i class="material-icons">search</i>
+            </a>
+            <a class="navbarItem" id="profileButton" href="/profile">
+                <i class="material-icons">person</i>
+            </a>
+        </nav>
+        <div class="navbarMargin"></div>
+
+    <script src="/userProfileScripts.js"></script>
+
+    </body>
+</html>

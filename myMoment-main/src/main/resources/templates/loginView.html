@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="myMoment">
+    <meta name="keywords" content="myMoment">
+    <meta name="description" content="myMoment">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/loginStyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+
+    <title>myMoment Login</title>
+</head>
+<body>
+<div class="centreOnScreen">
+    <div class="logo">my<span class="boldMoment">Moment</span></div>
+    <form class="loginForm" method="post" th:action="'/login'">
+        <h1>Login</h1>
+        <div class="textbox">
+            <i class="material-icons">person</i>
+            <input type="text" placeholder="Username" name="username" value=""/>
+        </div>
+        <div class="textbox">
+            <i class="material-icons">lock</i>
+            <input type="password" placeholder="Password" name="password" value=""/>
+        </div>
+        <div th:if="${param.error}">
+            <br>Wrong username or password.
+        </div>
+        <input class="loginButton" type="submit" name="" value="Sign in"/>
+        <div class="otherLogin">
+            <a href=""><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+        </div>
+        <div class="otherLogin">
+            <a href=""><i class="fa fa-google"></i> Sign in with Google</a>
+        </div>
+    </form>
+    <div class="createAccount">
+        <a href="/signup">Not a member yet?<br><span class="createOrAlreadyMember">Create account!</span></a>
+    </div>
+</div>
+</body>
+</html>

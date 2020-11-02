@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="myMoment">
+        <meta name="keywords" content="myMoment">
+        <meta name="description" content="myMoment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/mapStyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+
+        <title>myMoment</title>
+    </head>
+    <body>
+        <header class="topbar">
+            <a href="/" class="logo">my<span class="boldMoment">Moment</span></a>
+        </header>
+        <div class="topbarmargin"></div>
+
+        <div id="map"></div>
+
+        <!-- Bottom bar with icons -->
+        <nav class="navbar">
+            <a class="navbarItem" id="homeButton" href="/">
+                <i class="material-icons">home</i>
+            </a>
+            <a class="navbarItem" id="mapButton" href="/map">
+                <i class="material-icons">map</i>
+            </a>
+            <a class="navbarItem" id="newPostButton" href="/newpost">
+                <i class="material-icons">camera_alt</i>
+            </a>
+            <a class="navbarItem" id="searchButton" href="">
+                <i class="material-icons">search</i>
+            </a>
+            <a class="navbarItem" id="profileButton" href="/profile">
+                <i class="material-icons">person</i>
+            </a>
+        </nav>
+        <div class="navbarMargin"></div>
+
+    <script src="/services.js"></script>
+    <script src="/mapScripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4x465NfMbpeSJ41zhNpn_Qtyo4RoMi_k&libraries=visualization&map_ids=53c14bc13344ec8c&callback=initMap"></script>
+    </body>
+</html>
